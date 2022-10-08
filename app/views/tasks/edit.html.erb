@@ -1,0 +1,17 @@
+<div class="container" class="d-flex align-items-centre">
+<h1>Update Task >>> <%= @task.title %></h1>
+
+<%= form_with model: @task do |f| %>
+<div class=form-edit>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed %>
+  <%= f.check_box :completed%>
+  </div>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+</div>
